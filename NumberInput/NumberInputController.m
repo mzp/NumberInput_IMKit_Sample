@@ -328,6 +328,10 @@ Here are the three approaches:
 {
 	[_currentClient setMarkedText:[candidateString string] selectionRange:NSMakeRange(_insertionIndex, 0) replacementRange:NSMakeRange(NSNotFound,NSNotFound)];
 	_insertionIndex = [candidateString length];
+
+    extern IMKCandidates*        candidates;
+
+    [candidates showAnnotation: [[NSString alloc] initWithString:@"this is annotation"]];
 }
 
 /*!
