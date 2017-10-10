@@ -242,7 +242,7 @@ Here are the three approaches:
 				[candidates updateCandidates];  // This updates the candidates.
 				[candidates show:kIMKLocateCandidatesBelowHint];  // This shows the candidates. If possible, display them below the users current
 																  // insertion point.
-				
+                handled = YES;
 				
 			}
 			else {
