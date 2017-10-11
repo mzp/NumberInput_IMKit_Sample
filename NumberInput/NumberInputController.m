@@ -239,11 +239,13 @@ Here are the three approaches:
 					[candidates setPanelType:kIMKSingleRowSteppingCandidatePanel];
 				}
 				_currentClient = sender;
-				[candidates updateCandidates];  // This updates the candidates.
-				[candidates show:kIMKLocateCandidatesBelowHint];  // This shows the candidates. If possible, display them below the users current
-																  // insertion point.
-				
-				
+                [candidates setCandidateData:@[ @"a", @"b", @"c"]];
+				[candidates show:kIMKLocateCandidatesBelowHint];
+
+				NSInteger n = [candidates candidateStringIdentifier: @"a"];
+ 				NSInteger m = [candidates candidateStringIdentifier: @"b"];
+				NSLog(@"id of a: %ld, id of b: %ld", n, m);
+				handled = YES;
 			}
 			else {
 			
